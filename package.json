@@ -19,13 +19,14 @@
     "start:client": "next start",
     "start:server": "npm start --prefix server",
     "typecheck": "npm run build:types && tsc --noEmit && tsc --noEmit -p server",
-    "heroku-prebuild": "npm run build:server"
+    "heroku-prebuild": "npm install --prefix server && npm run build:server"
   },
   "dependencies": {
     "@aspida/axios": "^0.12.2",
     "@aspida/swr": "^0.2.2",
     "axios": "^0.21.0",
     "class-validator": "^0.12.2",
+    "frourio-app-server": "file:server",
     "next": "^10.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

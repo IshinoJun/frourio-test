@@ -8,6 +8,7 @@
     "dev:frourio": "frourio --watch",
     "dev:prisma": "prisma generate --watch",
     "build": "npm run build:frourio && webpack --mode=production",
+    "build:prisma": "prisma generate",
     "build:frourio": "npm run migrate:dev && prisma generate && frourio",
     "migrate:dev": "prisma migrate dev --preview-feature",
     "migrate:reset": "prisma migrate reset --preview-feature",

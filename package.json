@@ -9,7 +9,7 @@
     "dev:aspida": "aspida --watch",
     "build": "run-p build:client build:server",
     "build:client": "aspida && npm run build:prisma --prefix server && next build",
-    "build:server": "aspida && npm run build --prefix server",
+    "build:server": "npm run build --prefix server",
     "build:types": "aspida && npm run build:frourio --prefix server",
     "lint": "eslint --ext .ts,.js,.tsx .",
     "lint:fix": "npm run lint -- --fix",
@@ -18,8 +18,7 @@
     "start": "run-p start:*",
     "start:client": "next start",
     "start:server": "npm start --prefix server",
-    "typecheck": "npm run build:types && tsc --noEmit && tsc --noEmit -p server",
-    "heroku-prebuild": "yarn install && yarn install --cwd server && yarn build"
+    "typecheck": "npm run build:types && tsc --noEmit && tsc --noEmit -p server"
   },
   "dependencies": {
     "@types/node": "^14.14.10",
@@ -32,11 +31,7 @@
     "next": "^10.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "swr": "^0.3.9",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^2.2.1",
-    "ts-loader": "^8.0.11",
-    "typescript": "^4.1.2"
+    "swr": "^0.3.9"
   },
   "devDependencies": {
     "@types/node": "^14.14.10",

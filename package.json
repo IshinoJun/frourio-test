@@ -9,7 +9,7 @@
     "dev:aspida": "aspida --watch",
     "build": "run-p build:client build:server",
     "build:client": "aspida && npm run build:prisma --prefix server && next build",
-    "build:server": "npm run build --prefix server",
+    "build:server": "aspida && npm run build --prefix server",
     "build:types": "aspida && npm run build:frourio --prefix server",
     "lint": "eslint --ext .ts,.js,.tsx .",
     "lint:fix": "npm run lint -- --fix",

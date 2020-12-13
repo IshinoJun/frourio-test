@@ -19,14 +19,13 @@
     "start:client": "next start",
     "start:server": "npm start --prefix server",
     "typecheck": "npm run build:types && tsc --noEmit && tsc --noEmit -p server",
-    "heroku-prebuild": "yarn install && yarn install --cwd server && yarn build:client"
+    "heroku-prebuild": "yarn install && yarn install --cwd server && yarn build:server"
   },
   "dependencies": {
     "@aspida/axios": "^0.12.2",
     "@aspida/swr": "^0.2.2",
     "axios": "^0.21.0",
     "class-validator": "^0.12.2",
-    "dotenv": "^8.2.0",
     "next": "^10.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

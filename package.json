@@ -19,7 +19,7 @@
     "start:client": "next start",
     "start:server": "npm start --prefix server",
     "typecheck": "npm run build:types && tsc --noEmit && tsc --noEmit -p server",
-    "heroku-prebuild": "yarn install --cwd server && yarn build:server"
+    "heroku-prebuild": "yarn install --cwd server && yarn build:client"
   },
   "dependencies": {
     "@aspida/axios": "^0.12.2",

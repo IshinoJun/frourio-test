@@ -10,12 +10,12 @@
     "build": "npm run build:frourio && webpack --mode=production",
     "build:prisma": "prisma generate",
     "build:frourio": "npm run migrate:dev && prisma generate && frourio",
-    "migrate:dev": "prisma migrate dev --preview-feature",
+    "migrate:dev": "prisma migrate save --experimental && prisma migrate up --experimental",
     "migrate:reset": "prisma migrate reset --preview-feature",
     "start": "cross-env NODE_ENV=production node index.js"
   },
   "dependencies": {
-    "@prisma/client": "^2.13.0",
+    "@prisma/client": "2.12.0",
     "class-validator": "^0.12.2",
     "dotenv": "^8.2.0",
     "fastify": "^3.9.1",
@@ -26,7 +26,7 @@
     "fastify-static": "^3.3.0"
   },
   "devDependencies": {
-    "@prisma/cli": "^2.13.0",
+    "@prisma/cli": "2.12.0",
     "@types/busboy": "^0.2.3",
     "cross-env": "^7.0.2",
     "frourio": "^0.21.1",

@@ -10,8 +10,8 @@ services:
     links:
       - db
     env_file:
-      - ./server/.env
-      - ./server/prisma/.env
+      - ./server/.env.production.local
+      - ./server/prisma/.env.production.local
 
   db:
     image: postgres:12
